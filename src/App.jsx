@@ -40,6 +40,7 @@ function App() {
       alert("Emails sent successfully ✅");
     } catch (error) {
       console.error(error);
+      console.error("Backend response:", error.response?.data);
       const serverMessage =
         error.response?.data?.message ||
         error.response?.data?.error ||
